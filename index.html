@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css"> 
+  <link rel="stylesheet" href="style/responsive.css">
+  <title>Contact form</title>
+</head>
+<body>
+
+	<div class="container">
+		<h2>Contact Us</h2>	
+		<form name="myform" id="myFrom">
+
+			<div class="name">
+				<div>
+					<label for="fName">First Name <span class="stars">&#42;</span></label>
+					<input type="text" id="fName" >
+					<span class="errores">This field is required</span>
+				</div>
+				<div>
+					<label for="lName">First Name <span class="stars">&#42;</span></label>
+					<input type="text" id="lName">
+					<span class="errores">This field is required</span>
+				</div>
+			</div>
+
+			<div class="email">
+				<label for="email">Email Address <span class="stars">&#42;</span></label> <br>
+				<input type="email" placeholder="email@example.com" id="email">
+				<span class="errores">Please enter a valid email address</span>
+			</div>
+
+			<div class="query">
+				<p>Query Type <span class="stars">&#42;</span></p>
+				<div>
+					<div>
+						<input type="radio" id="general_enquiry" name="query_type">
+						<label for="general_enquiry">General Enquiry</label>
+					</div>
+					<div>
+						<input type="radio" id="support_request" name="query_type">
+						<label for="support_request">Support Request</label>
+					</div>
+				</div>
+				<span class="error_radioButton">Please select a query type</span>
+			</div>
+
+			<div class="msg">
+				<label for="message">Message <span class="stars">&#42;</span></label><br>
+				<textarea id="message"></textarea><br>
+				<span class="errores">This field is required</span>
+			</div>
+
+			<div class="checkBox">
+				<input type="checkbox" id="check">
+				<label for="check">I consent to being contacted by the team <span class="stars">&#42;</span></label><br>
+				<span class="errores">To submit this form.please contest to being contacted</span>
+			</div>
+
+			<div class="submit">
+				<input type="submit" value="Submit" id="submit">
+			</div>
+		</form>
+	</div>
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Vahab Azimzadeh</a>.
+  </div>
+
+  <script src="javascript/index.js"></script>
+</body>
+</html>
