@@ -11,7 +11,7 @@ let submit = document.getElementById('submit')
 let errores_withOutRadioButtons = document.querySelectorAll('.errores')
 let error_radioButtons = document.querySelector('.error_radioButton')
 
-
+let popupAlert = document.getElementById('popup')
 
 submit.addEventListener('click', function(){
 
@@ -48,8 +48,15 @@ submit.addEventListener('click', function(){
 
 
     if( (value_generalEnquiry || value_supportRequest) && value_fname && value_lname && value_email && checkCorrectEmail && value_msg && value_check){
-        // alert("OK!")
-        form.submit()
+        form.addEventListener('submit', function(event){
+            event.preventDefault()
+        })
+        popupAlert.classList.toggle('transitionPopupAlert')  
+        setTimeout(timeHandler, 5000)
+        function timeHandler(){
+            popupAlert.classList.remove('transitionPopupAlert')
+            location.reload()
+        }
     } else{
         form.addEventListener('submit', function(event){
             event.preventDefault()
